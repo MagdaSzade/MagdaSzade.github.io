@@ -13,7 +13,7 @@
 
 .conteiner {
     display: grid;
-    max-width: 1050px;
+    max-width: 1200px;
     height: 95vh;
     margin: auto;
     grid-template-rows: 200px 1fr 100px;
@@ -42,6 +42,7 @@ header {
     height: 100px;
     justify-self: start;
     margin: auto 50px;
+    border: solid 1px #F9FFDD;
     border-radius: 50%;
     opacity: 0.9;
 }
@@ -50,15 +51,27 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
 }
 
 .navbar-button {
     display: inline-block;
-    width: 80px;
-    padding: 10px;
-    margin: 5px;
+    width: 5rem;
+    padding: 0.2rem;
+    margin: 0.3rem;
     text-align: center;
-    background-color: rgba(249, 255, 221, 0.3); 
+    background-color: rgba(249, 255, 221, 0.2);
+    border: 1px solid rgba(0%, 0%, 0%, 50%);
+}
+
+a.nav-link:link, a.nav-link:visited {
+    color: #1D381F;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+p {
+   text-align: center; 
 }
 
 .content {
@@ -81,7 +94,7 @@ header {
 }
 
 .content-h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -98,9 +111,14 @@ footer {
 
 
 @media (max-width: 750px) {
+    :root {
+        font-size: 12px;
+    }
+
     header {
         display: inline-grid;
         width: 95%;
+        height: auto;
         grid-template-columns: 1fr;
         margin: auto;
         grid-area: header;
@@ -108,8 +126,8 @@ footer {
 
     .miniaturka {
         display: inline-block;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         justify-self: center;
         margin: auto 50px;
         border-radius: 50%;
