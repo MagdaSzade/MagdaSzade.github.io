@@ -1,158 +1,119 @@
-html {
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: normal;
-  margin: 0;
-  padding: 0; }
+:root {
+    font-family: 'Quicksand', sans-serif;
+    color: #F9FFDD;
+    font-size: 16px;
+}
 
-input,
-textarea {
-  width: 100%;
-  padding: 5px;
-  margin: 0;
-  border-radius: 2px;
-  border: 1px solid #ccc; }
+.wrapper {
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
-body {
-  margin: 0;
-  padding: 0; }
+.conteiner {
+    display: grid;
+    max-width: 1050px;
+    height: 95vh;
+    margin: auto;
+    grid-template-rows: 200px 1fr 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas:
+        "header header"
+        "content content"
+        "footer footer";
+}
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
+header {
+    display: inline-grid;
+    width: 95%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    grid-area: header;
+}
 
-.crud {
-  margin-bottom: 20px; }
+.miniaturka {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    justify-self: start;
+    margin: auto 50px;
+    border-radius: 50%;
+    opacity: 0.9;
+}
 
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto; }
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px; } }
+.navbar-button {
+    display: inline-block;
+    width: 80px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    background-color: rgba(249, 255, 221, 0.3); 
+}
 
-@media (min-width: 992px) {
-  .container {
-    width: 970px; } }
+.content {
+    width: 95%;
+    margin: auto auto;
+    height: 100%;
+    grid-area: content;
+}
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px; } }
+.h1-holder {
+    display: block;
+    width: 50%;
+    padding: 10px 10px;
+    margin: auto auto;
+}
 
-.kodilla-heading--main {
-  margin: 20px auto;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 400; }
+.content-h1 {
+    font-size: 2rem;
+    text-align: center;
+}
 
-.datatable__row {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  border: 1px solid #ccc;
-  border-bottom: none;
-  margin: 0; }
+.content-h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
 
-.datatable__row-section-wrapper {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-around; }
+footer {
+    width: 95%;
+    height: calc(100%-15px);
+    margin: auto auto;
+    grid-area: footer;
+    text-align: center;
+    background-color: rgba(249, 255, 221, 0.3);
+    font-weight: bold;
+    color:#1D381F;
+}
 
-.datatable__row:first-of-type {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px; }
 
-.datatable__row:last-of-type {
-  border-bottom: 1px solid #ccc;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; }
+@media (max-width: 750px) {
+    header {
+        display: inline-grid;
+        width: 95%;
+        grid-template-columns: 1fr;
+        margin: auto;
+        grid-area: header;
+    }
 
-.datatable__row input,
-.datatable__row textarea {
-  display: none; }
+    .miniaturka {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        justify-self: center;
+        margin: auto 50px;
+        border-radius: 50%;
+        opacity: 0.9;
+    }
 
-.datatable__row .datatable__button--editing {
-  display: none; }
-
-.datatable__row--editing input,
-.datatable__row--editing textarea {
-  display: block; }
-
-.datatable__row--editing .datatable__field-value {
-  display: none; }
-
-.datatable__row--editing .datatable__button {
-  display: none; }
-
-.datatable__row--editing .datatable__button--editing,
-.datatable__row--editing .datatable__button--card-creation {
-  display: block; }
-
-.datatable__row--add input,
-.datatable__row--add textarea {
-  display: block; }
-
-.datatable__field-value {
-  margin-bottom: 0;
-  font-size: 14px; }
-
-.datatable__row-section {
-  border: none;
-  margin: 0;
-  padding: 10px;
-  flex-grow: 1; }
-
-.datatable__row-section--button-section,
-.datatable__row-section--trello-section {
-  margin-left: auto;
-  align-self: center;
-  flex-shrink: 1;
-  flex-grow: 0;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center; }
-
-.datatable__input-label {
-  display: block;
-  text-align: left;
-  font-size: 14px;
-  margin: 5px auto;
-  font-weight: 500;
-  letter-spacing: 0.6px; }
-
-.datatable__button {
-  color: #fff;
-  background-color: #28a745;
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: 8px 12px;
-  font-size: 12px;
-  min-width: 120px;
-  line-height: 1.25;
-  border-radius: 4px; }
-
-.datatable__select {
-  display: block;
-  margin-bottom: 10px; }
-
-.datatable__tasks-container:empty {
-  position: relative; }
-
-.datatable__tasks-container:empty::after {
-  content: 'Currently, there are no tasks available.'; }
-
-.template {
-  display: none; }
+}
