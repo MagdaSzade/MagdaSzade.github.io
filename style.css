@@ -60,7 +60,13 @@ header {
     padding: 0.2rem;
     margin: 0.3rem;
     text-align: center;
+    text-decoration: none;
     background-color: rgba(249, 255, 221, 0.2);
+    border: 1px solid rgba(0%, 0%, 0%, 50%);
+}
+
+.navbar-button:hover {
+    background-color: rgba(249, 255, 221, 0.9);
     border: 1px solid rgba(0%, 0%, 0%, 50%);
 }
 
@@ -83,6 +89,7 @@ p {
 
 .h1-holder {
     display: block;
+    position: relative;
     width: 50%;
     padding: 10px 10px;
     margin: auto auto;
@@ -93,9 +100,48 @@ p {
     text-align: center;
 }
 
+.content-h1 span{
+    display: block;
+    overflow: hidden;
+    display: block;
+    letter-spacing: 1rem;
+    animation: texttransform 2s ease-in-out;
+}
+
+@keyframes texttransform {
+    0% {
+        color:transparent;
+        letter-spacing: 15rem; 
+    }
+    30% {
+        letter-spacing: 2rem;
+    }
+    85% {    
+        letter-spacing: 1rem;
+    }
+    100% {
+    }
+}
+
 .content-h2 {
     font-size: 1.2rem;
     text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.content-h2 span{
+    display: block;
+    position: relative;
+    top:-4rem;
+    letter-spacing: 0.2rem;
+    animation: texth2 2s ease-in-out 1s forwards;
+}
+
+@keyframes texth2 {
+    0% {top: -4rem;}
+    100% {
+        top: 0px;
+    }
 }
 
 footer {
@@ -115,6 +161,10 @@ footer {
         font-size: 12px;
     }
 
+    .conteiner {
+        grid-template-rows: auto 1fr 100px;
+    }
+
     header {
         display: inline-grid;
         width: 95%;
@@ -129,7 +179,7 @@ footer {
         width: 80px;
         height: 80px;
         justify-self: center;
-        margin: auto 50px;
+        margin: 0.5rem auto;
         border-radius: 50%;
         opacity: 0.9;
     }
