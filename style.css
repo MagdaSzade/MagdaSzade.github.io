@@ -71,13 +71,13 @@ header {
 }
 
 a.nav-link:link, a.nav-link:visited {
-    color: #1D381F;
     text-decoration: none;
-    font-size: 0.8rem;
 }
 
 p {
-   text-align: center; 
+    color: #1D381F;
+    text-align: center;
+    font-size: 0.8rem; 
 }
 
 .content {
@@ -142,6 +142,37 @@ p {
     100% {
         top: 0px;
     }
+}
+
+.about-me-box {
+    display: none;
+    width: 60%;
+    text-align: center;
+    padding: 0.5rem;
+    margin: auto;
+    font-weight: bold;
+    background-color: rgba(249, 255, 221, 0.5);
+}
+
+#contact-box {
+    display: none;
+    width: 60%;
+    text-align: center;
+    padding: 0.5rem;
+    margin: auto;
+    font-weight: bold;
+    background-color: rgba(249, 255, 221, 0.5);
+}
+
+#linkdin-holder {
+    display: none;
+    width: 60%;
+    margin: auto;
+    border: 2px solid red;
+}
+
+.center {
+    margin: auto;
 }
 
 footer {
