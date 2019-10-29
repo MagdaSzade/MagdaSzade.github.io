@@ -15,16 +15,16 @@
 .conteiner {
     display: grid;
     max-width: 1200px;
-    min-height: 700px;
     height: 95vh;
+    min-height: 750;
     margin: auto;
-    grid-template-rows: 20vh 1fr 10vh;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 10vh;
+    grid-template-columns: 1fr;
     grid-gap: 5px;
     grid-template-areas:
-        "header header"
-        "content content"
-        "footer footer";
+        "header"
+        "content"
+        "footer";
 }
 
 header {
@@ -208,15 +208,15 @@ textarea {
 
 footer {
     width: 95%;
-    height: calc(100%-15px);
     margin: auto auto;
     grid-area: footer;
     text-align: center;
-    align-self: end;
     background-color: rgba(249, 255, 221, 0.3);
     font-weight: bold;
     color:#1D381F;
 }
+
+
 
 @media only screen and (max-width: 1000px) and (min-width: 750px) {
     .wrapper {
@@ -224,9 +224,7 @@ footer {
     }
 
     .conteiner {
-        height: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr 100px;
+        min-height: 800px;
     }
 
     header {
@@ -258,12 +256,10 @@ footer {
     }
 
     .conteiner {
-        grid-template-rows: auto 1fr 80px;
+        min-height: 850px;
     }
 
     header {
-        height: auto;
-        grid-area: header;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr 1fr;
         grid-template-areas:
@@ -273,13 +269,10 @@ footer {
     }
 
     .miniaturka {
-        display: inline-block;
         width: 80px;
         height: 80px;
         justify-self: center;
         margin: 0.5rem auto;
-        border-radius: 50%;
-        opacity: 0.9;
     }
 
     .content-h1 span{
@@ -299,7 +292,7 @@ footer {
     }
 
     .conteiner {
-        height: 600px;   
+        height: auto;   
     }
 
     header {
