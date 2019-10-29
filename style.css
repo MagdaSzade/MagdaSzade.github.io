@@ -15,10 +15,10 @@
 .conteiner {
     display: grid;
     max-width: 1200px;
-    height: 95vh;
     min-height: 700px;
+    height: 95vh;
     margin: auto;
-    grid-template-rows: 150px 1fr 100px;
+    grid-template-rows: 20vh 1fr 10vh;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
     grid-template-areas:
@@ -212,21 +212,10 @@ footer {
     margin: auto auto;
     grid-area: footer;
     text-align: center;
+    align-self: end;
     background-color: rgba(249, 255, 221, 0.3);
     font-weight: bold;
     color:#1D381F;
-}
-
-@media only screen and (min-width:1000px) {
-    .conteiner {
-        grid-template-rows: 150px 1fr 100px;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 5px;
-        grid-template-areas:
-            "header header"
-            "content content"
-            "footer footer";
-    }
 }
 
 @media only screen and (max-width: 1000px) and (min-width: 750px) {
