@@ -16,7 +16,6 @@
     display: grid;
     max-width: 1200px;
     height: 95vh;
-    min-height: 600px;
     margin: auto;
     grid-template-rows: auto 1fr 2rem;
     grid-template-columns: 1fr;
@@ -31,11 +30,6 @@ header {
     display: inline-grid;
     width: 95%;
     height: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "img navbar"
-        "img external";
     justify-items: center;
     align-items: center;
     margin: auto;
@@ -44,8 +38,6 @@ header {
 
 .miniaturka {
     display: inline-block;
-    width: 100px;
-    height: 100px;
     grid-area: img;
     justify-self: center;
     align-self: center;
@@ -216,6 +208,24 @@ footer {
     color:#1D381F;
 }
 
+@media only screen and (min-width:1000px) {
+    .conteiner {
+        min-height: 600px;
+    }
+
+    header {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "img navbar"
+            "img external";
+    }
+
+    .miniaturka {
+        width: 100px;
+        height: 100px;
+    }
+}
 
 
 @media only screen and (max-width: 1000px) and (min-width: 750px) {
