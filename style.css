@@ -1,11 +1,12 @@
 :root {
     font-family: 'Quicksand', sans-serif;
-    color: #F9FFDD;
     font-size: 16px;
+    --font-color-welcome: #F9FFDD;
+    --font-color-details: #1D381F;
 }
 
 .wrapper {
-    background-image: url(img/background.JPG);
+    background-image: url(img/backgroundforcomputer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -15,8 +16,9 @@
     display: grid;
     max-width: 1200px;
     height: 95vh;
+    min-height: 700px;
     margin: auto;
-    grid-template-rows: 200px 1fr 100px;
+    grid-template-rows: 150px 1fr 100px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
     grid-template-areas:
@@ -30,6 +32,10 @@ header {
     width: 95%;
     height: 100%;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "img navbar"
+        "img external";
     justify-items: center;
     align-items: center;
     margin: auto;
@@ -40,9 +46,11 @@ header {
     display: inline-block;
     width: 100px;
     height: 100px;
-    justify-self: start;
+    grid-area: img;
+    justify-self: center;
+    align-self: center;
     margin: auto 50px;
-    border: solid 1px #F9FFDD;
+    border: solid 1px var(--font-color-welcome);
     border-radius: 50%;
     opacity: 0.9;
 }
@@ -50,14 +58,21 @@ header {
 .navbar {
     display: flex;
     flex-wrap: wrap;
+    grid-area: navbar;
     justify-content: space-around;
     align-items: center;
+}
+
+.external-links {
+    display: felx;
+    flex-wrap: wrap;
+    grid-area: external;
 }
 
 .navbar-button {
     display: inline-block;
     width: 5rem;
-    padding: 0.2rem;
+    padding: 0.1rem;
     margin: 0.3rem;
     text-align: center;
     text-decoration: none;
@@ -75,7 +90,7 @@ a.nav-link:link, a.nav-link:visited {
 }
 
 p {
-    color: #1D381F;
+    color: var(--font-color-details);
     text-align: center;
     font-size: 0.8rem; 
 }
@@ -102,24 +117,18 @@ p {
 
 .content-h1 span{
     display: block;
-    overflow: hidden;
-    display: block;
     letter-spacing: 1rem;
+    color: var(--font-color-welcome);
     animation: texttransform 2s ease-in-out;
 }
 
 @keyframes texttransform {
     0% {
         color:transparent;
-        letter-spacing: 15rem; 
-    }
-    30% {
-        letter-spacing: 2rem;
-    }
-    85% {    
-        letter-spacing: 1rem;
+        letter-spacing: 5rem; 
     }
     100% {
+        letter-spacing: 1rem;  
     }
 }
 
@@ -132,13 +141,14 @@ p {
 .content-h2 span{
     display: block;
     position: relative;
-    top:-4rem;
+    top:-10rem;
     letter-spacing: 0.2rem;
+    color: var(--font-color-welcome);
     animation: texth2 2s ease-in-out 1s forwards;
 }
 
 @keyframes texth2 {
-    0% {top: -4rem;}
+    0% {top: -6rem;}
     100% {
         top: 0px;
     }
@@ -151,7 +161,16 @@ p {
     padding: 0.5rem;
     margin: auto;
     font-weight: bold;
-    background-color: rgba(249, 255, 221, 0.5);
+    background-color: rgba(249, 255, 221, 0.7);
+}
+
+.about-me-p {
+    font-size: 1rem;
+}
+
+.about-me-a {
+    color: var(--font-color-details);
+    text-decoration: underline;
 }
 
 #contact-box {
@@ -164,14 +183,26 @@ p {
     background-color: rgba(249, 255, 221, 0.5);
 }
 
-#linkdin-holder {
-    display: none;
-    width: 60%;
-    margin: auto;
-    border: 2px solid red;
+.contact-p {
+    color: var(--font-color-details);
+    font-size: 1rem;
 }
 
-.center {
+#submit-button {
+    font-weight: bold;
+    color: var(--font-color-details);
+    font-size: 1rem;
+    background-color: rgba(249, 255, 221, 0.8);
+}
+
+input[type=text] {
+    width: 90%;
+    margin: auto;
+}
+
+textarea {
+    width: 90%;
+    height: 5rem;
     margin: auto;
 }
 
@@ -186,23 +217,70 @@ footer {
     color:#1D381F;
 }
 
+@media only screen and (min-width:1000px) {
+    .conteiner {
+        grid-template-rows: 150px 1fr 100px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        grid-template-areas:
+            "header header"
+            "content content"
+            "footer footer";
+    }
+}
 
-@media (max-width: 750px) {
-    :root {
-        font-size: 12px;
+@media only screen and (max-width: 1000px) and (min-width: 750px) {
+    .wrapper {
+        background-image: url(img/backgroundfortablet.jpg);
     }
 
     .conteiner {
+        height: auto;
+        grid-template-columns: 1fr;
         grid-template-rows: auto 1fr 100px;
     }
 
     header {
-        display: inline-grid;
-        width: 95%;
         height: auto;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr ;
+        grid-template-areas:
+            "img img"
+            "navbar external";
         margin: auto;
         grid-area: header;
+    }
+
+    .miniaturka {
+        width: 90px;
+        height: 90px;
+        justify-self: center;
+        margin: 0.6rem auto;
+    }
+}
+
+@media only screen and (max-width: 750px) and (min-width: 400px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        background-image: url(img/backgroundforfon.jpg);
+    }
+
+    .conteiner {
+        grid-template-rows: auto 1fr 80px;
+    }
+
+    header {
+        height: auto;
+        grid-area: header;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-areas:
+            "img"
+            "navbar" 
+            "external";
     }
 
     .miniaturka {
@@ -215,4 +293,62 @@ footer {
         opacity: 0.9;
     }
 
+    .content-h1 span{
+        letter-spacing: 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        background-image: url(img/backgroundforfon.jpg);
+        height: 750px; 
+    }
+
+    .conteiner {
+        height: 600px;   
+    }
+
+    header {
+        height: auto;
+        grid-area: header;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+            "img"
+            "external";
+    }
+
+    .miniaturka {
+        width: 60px;
+        height: 60px;
+        justify-self: center;
+        margin: 0.2rem auto;
+        border-radius: 50%;
+    }
+
+    .content-h1 {
+        font-size: 1rem;
+    }
+
+    .content-h2 {
+        font-size: 0.8rem;
+    }
+
+    .navbar {
+        display:none;
+    }
+
+    #aboutme {
+        display: block;
+        margin: 5px auto;
+    }
+
+    #contact-box {
+        display: block;
+    }
 }
