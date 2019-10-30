@@ -55,10 +55,18 @@ header {
     align-items: center;
 }
 
+.navbar-toggle {
+    display: none;
+}
+
 .external-links {
     display: felx;
     flex-wrap: wrap;
     grid-area: external;
+}
+
+.external-toggle {
+    display: none;
 }
 
 .navbar-button {
@@ -298,20 +306,22 @@ footer {
 
     .wrapper {
         background-image: url(img/backgroundforfon.jpg);
-        height: 750px; 
+        min-height: 620px; 
     }
 
     .conteiner {
-        height: auto;   
+        height: auto;
+        min-height: 600px;   
     }
 
     header {
         height: auto;
         grid-area: header;
         grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: auto auto auto;
         grid-template-areas:
             "img"
+            "navbar"
             "external";
     }
 
@@ -331,16 +341,51 @@ footer {
         font-size: 0.8rem;
     }
 
+
     .navbar {
-        display:none;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .navbar-button {
+        width: 10rem;
+    }
+
+    .navbar-toggle {
+        display: inline-block;
+    }
+
+    #home{
+        display: none;
+    }
+
+    #about{
+        display: none;
+    }
+
+    #contact{
+        display: none;
     }
 
     #aboutme {
-        display: block;
         margin: 5px auto;
     }
 
-    #contact-box {
-        display: block;
+    .external-links {
+        display: grid;
+        grid-template-columns: 100%;
     }
+
+    .external-toggle {
+        display: inline-block;
+    }
+
+    #github {
+        display: none;
+    }
+
+    #linkdin {
+        display: none;
+    }
+    
 }

@@ -11,4 +11,13 @@ $(document).ready(function(){
       $("#aboutme").hide();
       $("#contact-box").show();
     });
-  });
+    $("#menu").click(function(){
+      $("#home").toggle();
+      $("#about").toggle();
+      $("#contact").toggle();
+    });
+    $("#external-toggle").click(function(){
+      $("#github").toggle();
+      $("#linkdin").toggle();
+    });
+});
