@@ -55,7 +55,7 @@ header {
     align-items: center;
 }
 
-.navbar-toggle {
+#menu {
     display: none;
 }
 
@@ -65,7 +65,7 @@ header {
     grid-area: external;
 }
 
-.external-toggle {
+#external-toggle {
     display: none;
 }
 
@@ -350,8 +350,8 @@ footer {
     .navbar-button {
         width: 10rem;
     }
-
-    .navbar-toggle {
+    
+    #menu{
         display: inline-block;
     }
 
@@ -376,7 +376,7 @@ footer {
         grid-template-columns: 100%;
     }
 
-    .external-toggle {
+    #external-toggle {
         display: inline-block;
     }
 
