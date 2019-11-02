@@ -157,7 +157,7 @@ p.animation {
     }
 }
 
-.about-me-box {
+#aboutme {
     display: none;
     width: 60%;
     text-align: center;
@@ -165,9 +165,6 @@ p.animation {
     margin: auto;
     font-weight: bold;
     background-color: rgba(249, 255, 221, 0.7);
-}
-
-.about-me-p {
     font-size: 1rem;
 }
 
@@ -370,7 +367,7 @@ footer {
         display: none;
     }
 
-    #about-me {
+    #aboutme {
         margin: 5px auto;
     }
 
