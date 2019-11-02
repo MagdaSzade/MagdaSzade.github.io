@@ -10,56 +10,54 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
      <link href="https://fonts.googleapis.com/css?family=Quicksand:500&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="style.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-     <script src="script.js"></script>
   </head>
   <body>
     <div class="wrapper">
-        <div class=conteiner>
-        <header>
-            <img class="miniaturka" src="img/miniaturka.jpg">
-            <div class="navbar">
-                <button id="menu" class="navbar-toggle navbar-button"><p>Menu</p></a></button>
-                <button id="home" class="navbar-button"><p>Home</p></a></button>
-                <button id="about" class="navbar-button"><p>AboutMe</p></a></button>
-                <button id="contact" class="navbar-button"><p>Contact</p></a></button>
+        <div class="conteiner">
+            <header>
+                <img class="profile-picture" src="img/miniaturka.jpg">
+                <div class="navbar">
+                    <button id="menu" class="navbar-toggle navbar-button"><p>Menu</p></button>
+                    <button id="home" class="navbar-button"><p>Home</p></button>
+                    <button id="about" class="navbar-button"><p>AboutMe</p></button>
+                    <button id="contact" class="navbar-button"><p>Contact</p></button>
+                </div>
+                <div class="external-links">
+                    <button id="external-toggle" class="external-toggle navbar-button"><p>Links</p></a></button>
+                    <a href="https://github.com/MagdaSzade" target="_blank" class="nav-link"><button id="github" class="navbar-button"><p>GitHub</p></button></a>
+                    <a href="https://pl.linkedin.com/in/magdalena-szade-4981b3166?trk=people-guest_profile-result-card_result-card_full-click" target="_balnk" class="nav-link"><button id="linkdin" class="navbar-button"><p>LinkdIn</p></button></a>
+                </div>
+            </header>
+            <div class="content">
+                <div class="animation-box">
+                    <h1 class="content-h1">
+                        WELCOME
+                    </h1>
+                    <h2 class="content-h2">
+                        <p class="animation">I'm not a designer, but I can make it work!</p>
+                    </h2>
+                </div>
+                <div id="about-me" class="about-me-box">
+                    <p class="about-me-p">Hi! My name is Magda.</p>
+                    <p class="about-me-p">When I grow up I want to be a backend developer.</p>
+                    <p class="about-me-p">I finished the <a class="about-me-a" href="https://kodilla.com/pl/bootcamp/java?type=jdp&editionId=272">Kodilla Java Developer</a> bootcamp.</p>
+                    <p class="about-me-p">Right now, I'm participating in the <a class="about-me-a" href="https://coderscamp.edu.pl/" target="_blank" class="coderscamp">CodersCamp</a>.</p>
+                    <p class="about-me-p">I hope in short time I'll find my dream job.</p>
+                </div>
+                <div id="contact-box">
+                    <label for="email"><p class="contact-p">Write your e-mail adress:</p></label>
+                    <input type="text" name="email" id="email">
+                    <br>
+                    <label for="email-content"><p class="contact-p">What do you want to tell me:</p></label>
+                    <textarea name="email-contents" id="email-contents" placeholder="Temporary out of service."></textarea>
+                    <br>
+                    <input type="submit" id="submit-button" value="Submit" class="navbar-button">
+                </div>
             </div>
-            <div class="external-links">
-                <button id="external-toggle" class="external-toggle navbar-button"><p>Links</p></a></button>
-                <a href="https://github.com/MagdaSzade" target="_blank" class="nav-link"><button id="github" class="navbar-button"><p>GitHub</p></button></a>
-                <a href="https://pl.linkedin.com/in/magdalena-szade-4981b3166?trk=people-guest_profile-result-card_result-card_full-click" target="_balnk" class="nav-link"><button id="linkdin" class="navbar-button"><p>LinkdIn</p></button></a>
-            </div>
-        </header>
-        <div class="content">
-            <div class="h1-holder">
-                <h1 class="content-h1">
-                    <span>WELCOME</span>
-                </h1>
-                <h2 class="content-h2">
-                    <span>I'm not a designer, but I can make it work!</span>
-                </h2>
-            </div>
-            <div id="aboutme" class=about-me-box>
-                <p class="about-me-p">Hi! My name is Magda.</p>
-                <p class="about-me-p">When I grow up I want to be a backend developer.</p>
-                <p class="about-me-p">I finished the <a class="about-me-a" href="https://kodilla.com/pl/bootcamp/java?type=jdp&editionId=272">Kodilla Java Developer</a> bootcamp.</p>
-                <p class="about-me-p">Right now, I'm participating in the <a class="about-me-a" href="https://coderscamp.edu.pl/" target="_blank" class="coderscamp">CodersCamp</a>.</p>
-                <p class="about-me-p">I hope in short time I'll find my dream job.</p>
-            </div>
-            <div id="contact-box">
-                <label for="email"><p class="contact-p">Write your e-mail adress:</p></label>
-                <input type="text" name="email" id="email">
-                <br>
-                <label for="email-content"><p class="contact-p">What do you want to tell me:</p></label>
-                <textarea name="email-contents" id="email-contents" placeholder="Temporary out of service."></textarea>
-                <br>
-                <input type="submit" id="submit-button" value="Submit" class="navbar-button">
-            </div>
-        </div>
-        <footer>2019 © Wszelkie prawa zastrzeżone.</footer>
+            <footer>2019 © Wszelkie prawa zastrzeżone.</footer>
         </div>
     </div>
-  </body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js" type="text/javascript" ></script>
+</body>
 </html>

@@ -5,7 +5,13 @@
     --font-color-details: #1D381F;
 }
 
+body {
+    margin: 0px;
+}
+
 .wrapper {
+    widows: 100%;
+    margin: 1vh;
     background-image: url(img/backgroundforcomputer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,8 +20,8 @@
 
 .conteiner {
     display: grid;
-    max-width: 1200px;
-    height: 95vh;
+    max-width: 1100px;
+    height: 98vh;
     margin: auto;
     grid-template-rows: auto 1fr 2rem;
     grid-template-columns: 1fr;
@@ -30,18 +36,18 @@ header {
     display: inline-grid;
     width: 95%;
     height: 100%;
+    margin: auto;
     justify-items: center;
     align-items: center;
-    margin: auto;
     grid-area: header;
 }
 
-.miniaturka {
+.profile-picture {
     display: inline-block;
     grid-area: img;
     justify-self: center;
     align-self: center;
-    margin: auto 50px;
+    margin: 2vh 50px;
     border: solid 1px var(--font-color-welcome);
     border-radius: 50%;
     opacity: 0.9;
@@ -97,12 +103,12 @@ p {
 
 .content {
     width: 95%;
-    margin: auto auto;
     height: 100%;
+    margin: auto auto;
     grid-area: content;
 }
 
-.h1-holder {
+.animation-box {
     display: block;
     position: relative;
     width: 50%;
@@ -113,10 +119,6 @@ p {
 .content-h1 {
     font-size: 2rem;
     text-align: center;
-}
-
-.content-h1 span{
-    display: block;
     letter-spacing: 1rem;
     color: var(--font-color-welcome);
     animation: texttransform 2s ease-in-out;
@@ -133,15 +135,16 @@ p {
 }
 
 .content-h2 {
-    font-size: 1.2rem;
     text-align: center;
     overflow: hidden;
     position: relative;
 }
-.content-h2 span{
+
+p.animation {
     display: block;
     position: relative;
     top:-10rem;
+    font-size: 1.2rem;
     letter-spacing: 0.2rem;
     color: var(--font-color-welcome);
     animation: texth2 2s ease-in-out 1s forwards;
@@ -229,7 +232,7 @@ footer {
             "img external";
     }
 
-    .miniaturka {
+    .profile-picture {
         width: 100px;
         height: 100px;
     }
@@ -256,7 +259,7 @@ footer {
         grid-area: header;
     }
 
-    .miniaturka {
+    .profile-picture {
         width: 90px;
         height: 90px;
         justify-self: center;
@@ -286,7 +289,7 @@ footer {
             "external";
     }
 
-    .miniaturka {
+    .profile-picture {
         width: 80px;
         height: 80px;
         justify-self: center;
@@ -325,7 +328,7 @@ footer {
             "external";
     }
 
-    .miniaturka {
+    .profile-picture {
         width: 60px;
         height: 60px;
         justify-self: center;
@@ -367,7 +370,7 @@ footer {
         display: none;
     }
 
-    #aboutme {
+    #about-me {
         margin: 5px auto;
     }
 
