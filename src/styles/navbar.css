@@ -1,0 +1,79 @@
+.nav-bar-conteiner {
+    width: 100%;
+    max-width: 800px;
+    min-width: 150px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.nav-bar .button {
+    width: 110px;
+    height: 2rem;
+    box-sizing: border-box;
+    border: 1px solid var(--detail-color);
+    margin: none;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar .hamburger-menu {
+    position:relative;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--detail-color);
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar .hamburger-menu svg {
+    position: relative
+}
+
+.buttons-front {
+    display: grid;
+}
+
+.buttons-side {
+    position: relative;
+    top: 1rem;
+    right: 55px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--component-background-color);
+    z-index: 1005;
+}
+
+.svg-center {
+    position:relative;
+    top: 0.5rem;
+    left: 47px;
+}
+
+.nav-bar .button:hover {
+    cursor:pointer;
+    color: var(--hoover-color);
+    border: 1px solid var(--hoover-color);
+}
+
+.nav-bar .hamburger-menu:hover {
+    cursor:pointer;
+    color: var(--hoover-color);
+    border: 1px solid var(--hoover-color);
+}
+
+.nav-bar .hamburger-menu:hover path {
+    color: var(--hoover-color);
+}

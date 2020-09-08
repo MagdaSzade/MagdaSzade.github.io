@@ -1,0 +1,11 @@
+.canva-conteiner {
+    justify-items: center;
+}
+
+.canva {
+    display: grid;
+}
+
+.pixel {
+    border: solid 1px var(--detail-color);
+}

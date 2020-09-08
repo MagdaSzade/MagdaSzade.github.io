@@ -1,0 +1,18 @@
+.pixelart .button {
+    min-width: 80px;
+    padding: 0.5rem;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.07em;
+    border: 1px solid var(--detail-color);
+}
+
+.button:hover {
+    color: var(--hoover-color);
+    border: solid 1px var(--hoover-color);
+}
+
+.button:focus {
+    outline: none;
+}

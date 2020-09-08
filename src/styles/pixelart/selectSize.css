@@ -1,0 +1,33 @@
+.select-size {
+    margin: 1rem 0 0.5rem 0;
+    justify-items: center;
+}
+
+.select-size:hover .info {
+    position: absolute;
+    display: block;
+}
+
+.inputs {
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-content: center;
+}
+
+.inputs label {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs .button {
+    margin: 0.5rem;
+}
+
+.info {
+    display: none;
+    justify-content: center;
+    font-size: 0.6rem;
+    margin: 0 0 0 0;
+}

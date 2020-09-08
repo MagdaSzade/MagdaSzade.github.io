@@ -1,0 +1,131 @@
+.menu {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.cn-button {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1000;
+  border-radius: 50%;
+  background-color: var(--component-background-color);
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.cn-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0rem;
+  height: 0rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.animation-open {
+  animation-fill-mode: forwards;
+  animation-name: open;
+  animation-duration: 2s;
+}
+
+.animation-close {
+  animation-fill-mode: forwards;
+  animation-name: close;
+  animation-duration: 2s;
+}
+
+li {
+  margin: 0;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  z-index: 10;
+  background-color: var(--detail-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item0 {
+  top: 2.5rem;
+  right: 2.5rem;
+  transform: rotate(180deg) skew(62deg);
+  transform-origin: 100% 100%;
+}
+
+.item1 {
+  top: -2.5rem;
+  right: 2.5rem;
+  transform: rotate(210deg) skew(62deg);
+  transform-origin: 100% 100%;
+}
+
+.item2 {
+  top: -7.5rem;
+  right: 2.5rem;
+  transform: rotate(240deg) skew(62deg);
+  transform-origin: 100% 100%;
+}
+
+.menu a {
+  display: flex;
+  position: relative;
+  top: 1.7rem;
+  right: -0.5rem;
+}
+
+a:hover svg {
+  fill: var(--hoover-color);
+}
+
+a svg {
+  fill: var(--component-background-color);
+}
+
+.item0 a {
+  transform: skew(-62deg) rotate(-180deg);
+}
+
+.item1 a {
+  transform: skew(-62deg) rotate(-210deg);
+}
+
+.item2 a {
+  transform: skew(-62deg) rotate(-240deg);
+  ;
+}
+
+
+@keyframes open {
+  from {
+    width: 0rem;
+    height: 0rem;
+  }
+  to {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@keyframes close {
+  from {
+    width: 10rem;
+    height: 10rem;
+  }
+  to {
+    width: 0rem;
+    height: 0rem;
+  }
+}
