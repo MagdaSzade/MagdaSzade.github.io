@@ -10,7 +10,7 @@ const OtherSkills = (props) => {
                 <thead>
                     <tr>
                         <th>Nazwa</th>
-                        <th>Stars</th>
+                        <th>Poziom</th>
                     </tr>
                 </thead>
                 <tbody>

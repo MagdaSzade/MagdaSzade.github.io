@@ -63,8 +63,6 @@
     display: block;
 }
 
-
-
 @media (max-width: 700px) {
     .contact input {
         margin-bottom: 1.5rem;

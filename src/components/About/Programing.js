@@ -15,7 +15,7 @@ const Programing = (props) => {
                 <thead>
                     <tr>
                         <th>Nazwa</th>
-                        <th>Stars</th>
+                        <th>Poziom</th>
                         <th>Github</th>
                     </tr>
                 </thead>
