@@ -1,6 +1,7 @@
 import React from 'react';
 import PixelArt from './PixelArt/PixelArt';
 import Ships from './Ships/Ships';
+import Words from './Words/Words';
 
 const gameList = [
     {
@@ -11,6 +12,10 @@ const gameList = [
         name: "statki",
         component: <Ships />
     },
+    {
+        name: "words",
+        component: <Words />
+    }
 ]
 
 export default gameList;

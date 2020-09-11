@@ -4,7 +4,7 @@ import gameList from './gamesList';
 import '../../styles/content.css'
 
 const Games = () => {
-    const [ selectedGame, onGameSelect ] = useState(0);
+    const [ selectedGame, onGameSelect ] = useState(2);
 
     return (
         <div className="content-conteiner solid-border">
