@@ -1,7 +1,0 @@
-.words {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    gap: 5px;
-    width: 270px;
-    margin: 3rem auto 0 auto;
-}

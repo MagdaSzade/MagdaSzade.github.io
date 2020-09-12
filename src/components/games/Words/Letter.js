@@ -6,7 +6,13 @@ const Letter = (props) => {
     const letterRef = useRef();
 
     return (
-        <div className="letter" ref={letterRef}>{props.letter}</div>
+        <div 
+            className="letter" 
+            ref={letterRef}
+            onMouseEnter={() => props.move(letterRef.current)}
+            onMouseDown={() => props.start(letterRef.current)}>
+                {props.letter}
+        </div>
     )
 }
 

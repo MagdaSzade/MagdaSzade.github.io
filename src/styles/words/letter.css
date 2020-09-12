@@ -8,3 +8,8 @@
     border: 1px solid var(--detail-color);
     margin: 0;
 }
+
+.selected {
+    background-color: var(--detail-color);
+    color: var(--component-background-color);
+}
