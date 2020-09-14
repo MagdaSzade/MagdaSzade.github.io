@@ -13,3 +13,11 @@
     background-color: var(--detail-color);
     color: var(--component-background-color);
 }
+
+.disable-select {
+    user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+}

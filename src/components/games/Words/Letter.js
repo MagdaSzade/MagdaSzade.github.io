@@ -7,8 +7,9 @@ const Letter = (props) => {
 
     return (
         <div 
-            className="letter" 
+            className="letter disable-select" 
             ref={letterRef}
+            id={props.id}
             onMouseEnter={() => props.move(letterRef.current)}
             onMouseDown={() => props.start(letterRef.current)}>
                 {props.letter}
