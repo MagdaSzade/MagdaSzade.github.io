@@ -1,7 +1,7 @@
 .board {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    gap: 5px;
+    gap: 8px;
     width: 270px;
     margin: 1rem auto 0 auto;
     cursor: pointer;

@@ -3,4 +3,13 @@
     height: 50px;
     font-size: 20px;
     margin: 1rem auto;
+    text-align: center;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
 }
